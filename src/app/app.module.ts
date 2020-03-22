@@ -5,7 +5,7 @@ import { UserService } from './_services/user.service';
 import { RouterModule } from '@angular/router';
 import { AuthService } from './_services/auth.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { BrowserModule} from '@angular/platform-browser';
+import { BrowserModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { JwtModule } from '@auth0/angular-jwt';
@@ -24,11 +24,13 @@ import { MessagesComponent } from './messages/messages.component';
 import { appRoutes } from './routes';
 import { MemberCardComponent } from './_member/member-card/member-card.component';
 import { MemberListResolver } from './_resolvers/member-list.resolver';
-
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+// import { NgxGalleryModule } from 'ngx-gallery';
 
 export function getTokoen() {
   return localStorage.getItem('token');
 }
+
 
 /*
 export class CustomHammerConfig extends HammerGestureConfig  {
@@ -68,7 +70,10 @@ export class CustomHammerConfig extends HammerGestureConfig  {
             blacklistedRoutes : ['localhost:5000/api/auth']
           }
         }
+
       )
+      , NgxGalleryModule,
+
    ],
    providers: [
     AuthService,

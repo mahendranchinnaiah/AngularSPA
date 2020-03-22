@@ -4,6 +4,10 @@ import { UserService } from './../../_services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { error } from 'protractor';
 import { ActivatedRoute } from '@angular/router';
+// import { NgxGalleryImage, NgxGalleryOptions, NgxGalleryAnimation } from 'ngx-gallery';
+import {NgxGalleryOptions} from '@kolkov/ngx-gallery';
+import {NgxGalleryImage} from '@kolkov/ngx-gallery';
+import {NgxGalleryAnimation} from '@kolkov/ngx-gallery';
 
 @Component({
   selector: 'app-member-detail',
@@ -13,8 +17,8 @@ import { ActivatedRoute } from '@angular/router';
 export class MemberDetailComponent implements OnInit {
 
   user: User;
-  // galleryOptions: NgxGalleryOptions[];
-  // galleryImages: NgxGalleryImage[];
+  galleryOptions: NgxGalleryOptions[];
+  galleryImages: NgxGalleryImage[];
 
   constructor(private userService: UserService, private alertifyService: AlertifyService,
               private route: ActivatedRoute) { }
@@ -26,9 +30,6 @@ export class MemberDetailComponent implements OnInit {
       this.user = data['user'];
     });
 
-  }
-
-    /*
     this.galleryOptions = [
       {
       width: '500px',
@@ -56,7 +57,7 @@ export class MemberDetailComponent implements OnInit {
       return imageurls;
     }
     }
-    */
+
 
   // members/4
 
