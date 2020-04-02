@@ -1,3 +1,4 @@
+import { PhotoEditorComponent } from './_member/photo-editor/photo-editor.component';
 import { PreventUnSavedChanges } from './_guards/prevent-unsaved-changes-guard';
 import { MemberEditResolver } from './_resolvers/member-edit.resolver';
 import { MemberEditComponent } from './_member/member-edit/member-edit.component';
@@ -28,6 +29,7 @@ import { appRoutes } from './routes';
 import { MemberCardComponent } from './_member/member-card/member-card.component';
 import { MemberListResolver } from './_resolvers/member-list.resolver';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+import { FileUploadModule } from 'ng2-file-upload';
 // import { NgxGalleryModule } from 'ngx-gallery';
 
 export function getTokoen() {
@@ -55,7 +57,8 @@ export class CustomHammerConfig extends HammerGestureConfig  {
       MessagesComponent,
       MemberCardComponent,
       MemberDetailComponent,
-      MemberEditComponent
+      MemberEditComponent,
+      PhotoEditorComponent
 
    ],
    imports: [
@@ -77,6 +80,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
 
       )
       , NgxGalleryModule,
+      FileUploadModule
 
    ],
    providers: [
