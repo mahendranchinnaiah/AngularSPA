@@ -1,3 +1,4 @@
+import { TimeagoModule } from 'ngx-timeago';
 import { PhotoEditorComponent } from './_member/photo-editor/photo-editor.component';
 import { PreventUnSavedChanges } from './_guards/prevent-unsaved-changes-guard';
 import { MemberEditResolver } from './_resolvers/member-edit.resolver';
@@ -62,6 +63,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
 
    ],
    imports: [
+
       BrowserModule,
       BrowserAnimationsModule,
       HttpClientModule,
@@ -82,7 +84,8 @@ export class CustomHammerConfig extends HammerGestureConfig  {
 
       )
       , NgxGalleryModule,
-      FileUploadModule
+      FileUploadModule,
+      TimeagoModule.forRoot()
 
    ],
    providers: [
