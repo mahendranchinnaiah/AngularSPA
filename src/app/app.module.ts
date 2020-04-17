@@ -31,6 +31,7 @@ import { MemberCardComponent } from './_member/member-card/member-card.component
 import { MemberListResolver } from './_resolvers/member-list.resolver';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { FileUploadModule } from 'ng2-file-upload';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 // import { NgxGalleryModule } from 'ngx-gallery';
 
 export function getTokoen() {
@@ -85,7 +86,8 @@ export class CustomHammerConfig extends HammerGestureConfig  {
       )
       , NgxGalleryModule,
       FileUploadModule,
-      TimeagoModule.forRoot()
+      TimeagoModule.forRoot(),
+      PaginationModule.forRoot()
 
    ],
    providers: [
